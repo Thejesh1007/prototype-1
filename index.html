@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoES - AI-Driven Unified Data Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-water"></i>
+                    <span>MoES Data Platform</span>
+                </div>
+                <nav class="nav">
+                    <a href="#dashboard" class="nav-link active">Dashboard</a>
+                    <a href="#oceanographic" class="nav-link">Oceanographic</a>
+                    <a href="#fisheries" class="nav-link">Fisheries</a>
+                    <a href="#biodiversity" class="nav-link">Biodiversity</a>
+                    <a href="#ai-insights" class="nav-link">AI Insights</a>
+                </nav>
+                <div class="user-menu">
+                    <button class="user-button">
+                        <i class="fas fa-user"></i>
+                        <span>Dr. Smith</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Unified Data Dashboard</h1>
+                    <p>Real-time insights across oceanographic, fisheries, and biodiversity data</p>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>15,847</h3>
+                            <p>Ocean Data Points</p>
+                            <span class="stat-change positive">+12.3%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>2,456</h3>
+                            <p>Fish Species Tracked</p>
+                            <span class="stat-change positive">+8.7%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>98,341</h3>
+                            <p>Genetic Sequences</p>
+                            <span class="stat-change positive">+23.1%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>89.4%</h3>
+                            <p>AI Accuracy</p>
+                            <span class="stat-change positive">+2.1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Ocean Temperature Trends</h3>
+                            <div class="chart-controls">
+                                <select class="chart-select">
+                                    <option>Last 30 Days</option>
+                                    <option>Last 90 Days</option>
+                                    <option>Last Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="temperatureChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Fish Population Distribution</h3>
+                        </div>
+                        <canvas id="fishChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Data Sources -->
+                <div class="data-sources">
+                    <h3>Active Data Sources</h3>
+                    <div class="source-grid">
+                        <div class="source-card">
+                            <div class="source-status active"></div>
+                            <div class="source-info">
+                                <h4>ARGO Float Network</h4>
+                                <p>3,247 active floats providing real-time ocean data</p>
+                            </div>
+                        </div>
+                        <div class="source-card">
+                            <div class="source-status active"></div>
+                            <div class="source-info">
+                                <h4>Satellite Imagery</h4>
+                                <p>Daily high-resolution ocean surface data</p>
+                            </div>
+                        </div>
+                        <div class="source-card">
+                            <div class="source-status warning"></div>
+                            <div class="source-info">
+                                <h4>Research Vessels</h4>
+                                <p>12 vessels conducting marine surveys</p>
+                            </div>
+                        </div>
+                        <div class="source-card">
+                            <div class="source-status active"></div>
+                            <div class="source-info">
+                                <h4>Genomic Databases</h4>
+                                <p>NCBI, BOLD, and regional databases</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oceanographic Section -->
+        <section id="oceanographic" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Oceanographic Data</h1>
+                    <p>Comprehensive ocean monitoring and analysis</p>
+                </div>
+
+                <div class="data-filters">
+                    <div class="filter-group">
+                        <label>Region</label>
+                        <select class="filter-select">
+                            <option>Indian Ocean</option>
+                            <option>Arabian Sea</option>
+                            <option>Bay of Bengal</option>
+                            <option>All Regions</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Parameter</label>
+                        <select class="filter-select">
+                            <option>Temperature</option>
+                            <option>Salinity</option>
+                            <option>pH Level</option>
+                            <option>Dissolved Oxygen</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Time Period</label>
+                        <select class="filter-select">
+                            <option>Last 7 Days</option>
+                            <option>Last Month</option>
+                            <option>Last Quarter</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ocean-grid">
+                    <div class="ocean-map-card">
+                        <h3>Ocean Monitoring Stations</h3>
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Interactive map showing real-time monitoring stations</p>
+                        </div>
+                    </div>
+                    <div class="ocean-data-card">
+                        <h3>Current Conditions</h3>
+                        <div class="condition-list">
+                            <div class="condition-item">
+                                <span class="condition-label">Surface Temperature</span>
+                                <span class="condition-value">28.4°C</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">Salinity</span>
+                                <span class="condition-value">35.2 PSU</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">pH Level</span>
+                                <span class="condition-value">8.1</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">Wave Height</span>
+                                <span class="condition-value">1.8m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fisheries Section -->
+        <section id="fisheries" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Fisheries Management</h1>
+                    <p>Sustainable fisheries monitoring and stock assessment</p>
+                </div>
+
+                <div class="fisheries-grid">
+                    <div class="fisheries-card">
+                        <h3>Stock Assessment</h3>
+                        <div class="species-list">
+                            <div class="species-item">
+                                <div class="species-info">
+                                    <h4>Indian Mackerel</h4>
+                                    <p>Rastrelliger kanagurta</p>
+                                </div>
+                                <div class="stock-status healthy">Healthy</div>
+                            </div>
+                            <div class="species-item">
+                                <div class="species-info">
+                                    <h4>Hilsa Shad</h4>
+                                    <p>Tenualosa ilisha</p>
+                                </div>
+                                <div class="stock-status warning">Declining</div>
+                            </div>
+                            <div class="species-item">
+                                <div class="species-info">
+                                    <h4>Bombay Duck</h4>
+                                    <p>Harpadon nehereus</p>
+                                </div>
+                                <div class="stock-status critical">Critical</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fisheries-card">
+                        <h3>Catch Data Trends</h3>
+                        <canvas id="catchChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biodiversity Section -->
+        <section id="biodiversity" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Molecular Biodiversity</h1>
+                    <p>Genetic diversity analysis and species identification</p>
+                </div>
+
+                <div class="biodiversity-grid">
+                    <div class="bio-card">
+                        <h3>Genetic Diversity Index</h3>
+                        <div class="diversity-metric">
+                            <div class="metric-circle">
+                                <span class="metric-value">0.847</span>
+                            </div>
+                            <p>Shannon-Weaver Index</p>
+                        </div>
+                    </div>
+                    <div class="bio-card">
+                        <h3>Species Discovery</h3>
+                        <div class="discovery-stats">
+                            <div class="discovery-item">
+                                <span class="discovery-number">23</span>
+                                <span class="discovery-label">New Species This Year</span>
+                            </div>
+                            <div class="discovery-item">
+                                <span class="discovery-number">156</span>
+                                <span class="discovery-label">Genetic Variants</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio-card full-width">
+                        <h3>Phylogenetic Analysis</h3>
+                        <div class="phylo-placeholder">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Interactive phylogenetic tree visualization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Insights Section -->
+        <section id="ai-insights" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>AI-Powered Insights</h1>
+                    <p>Machine learning analytics and predictive modeling</p>
+                </div>
+
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <h3>Climate Impact Prediction</h3>
+                            <div class="confidence-badge">94% Confidence</div>
+                        </div>
+                        <div class="insight-content">
+                            <p>Rising sea temperatures in the Arabian Sea may impact sardine populations by 15-20% over the next 5 years.</p>
+                            <div class="insight-actions">
+                                <button class="btn-secondary">View Details</button>
+                                <button class="btn-primary">Generate Report</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <h3>Biodiversity Hotspots</h3>
+                            <div class="confidence-badge">87% Confidence</div>
+                        </div>
+                        <div class="insight-content">
+                            <p>ML algorithms identified 3 new biodiversity hotspots in the Western Ghats marine region.</p>
+                            <div class="insight-actions">
+                                <button class="btn-secondary">View Map</button>
+                                <button class="btn-primary">Download Data</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-card">
+                        <div class="insight-header">
+                            <h3>Fishing Zone Optimization</h3>
+                            <div class="confidence-badge">91% Confidence</div>
+                        </div>
+                        <div class="insight-content">
+                            <p>AI recommends adjusting fishing zones 15km southeast for optimal sustainable catch rates.</p>
+                            <div class="insight-actions">
+                                <button class="btn-secondary">View Route</button>
+                                <button class="btn-primary">Alert Vessels</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Models Status -->
+                <div class="models-section">
+                    <h3>Active AI Models</h3>
+                    <div class="models-grid">
+                        <div class="model-card">
+                            <h4>Ocean Temperature Predictor</h4>
+                            <div class="model-status">
+                                <span class="status-indicator active"></span>
+                                <span>Running</span>
+                            </div>
+                            <p>Last updated: 2 hours ago</p>
+                        </div>
+                        <div class="model-card">
+                            <h4>Fish Stock Assessment</h4>
+                            <div class="model-status">
+                                <span class="status-indicator active"></span>
+                                <span>Running</span>
+                            </div>
+                            <p>Last updated: 6 hours ago</p>
+                        </div>
+                        <div class="model-card">
+                            <h4>Species Classification</h4>
+                            <div class="model-status">
+                                <span class="status-indicator training"></span>
+                                <span>Training</span>
+                            </div>
+                            <p>Progress: 78%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ministry of Earth Sciences. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
